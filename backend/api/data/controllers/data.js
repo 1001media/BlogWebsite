@@ -10,7 +10,8 @@
 module.exports = {
     async nameEmail(ctx) {
         const { name, email } = ctx.request.body
-
+        
+        console.log(name)
 
         var data = await strapi.services.data.create({
             name,  email
