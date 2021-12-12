@@ -183,7 +183,7 @@ const BlogArchive = ({ data }) => {
 export default  BlogArchive
 
 export const getStaticProps = async() => {
-    const res = await fetch('http://localhost:1337/blogs')
+    const res = await fetch('https://blogfiver.herokuapp.com/blogs')
     const data = await res.json()
 
     return {
