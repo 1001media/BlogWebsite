@@ -260,7 +260,7 @@ const BlogPost = ({ blog, blogData }) => {
 export default BlogPost
 
 export const getStaticPaths  = async () => {
-    const res = await fetch('http://localhost:1337/blogs')
+    const res = await fetch('https://blogfiver.herokuapp.com/blogs')
     const datas = await res.json()
 
     const paths = datas.map(data => {
@@ -277,8 +277,8 @@ export const getStaticPaths  = async () => {
 
 export const getStaticProps = async (context) => {
     const id = context.params.id
-    const res = await fetch(`http://localhost:1337/blogs/${id}`)
-    const res2 = await fetch(`http://localhost:1337/blogs`)
+    const res = await fetch(`https://blogfiver.herokuapp.com/${id}`)
+    const res2 = await fetch(`https://blogfiver.herokuapp.com/blogs`)
     const data2 = await res2.json()
     const data = await res.json()
 
