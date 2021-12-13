@@ -17,6 +17,7 @@ import Head from "next/head"
 
 const useStyles = makeStyles({
     mainContainer : {
+      
         height : "13rem",
         [theme.breakpoints.down("sm")] : {
             height : "15rem",
@@ -180,6 +181,7 @@ const BlogPost = ({ blog, blogData }) => {
             <meta name="keywords" content={blog?.metakeywords} />
             <meta name="description" content={blog?.metadescription} />
         </Head>
+        <div style={{marginTop: "1rem", marginLeft: "1rem", marginRight: "1rem"}}>
         <NavBar />
         <Hero />
         <Grid container classes={{root: classes.mainContainer}} >
@@ -267,6 +269,7 @@ const BlogPost = ({ blog, blogData }) => {
           )}
              <Footer /> 
         </Grid> 
+        </div>
         </>
     )
 }

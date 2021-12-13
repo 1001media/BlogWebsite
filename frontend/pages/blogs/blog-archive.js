@@ -185,7 +185,7 @@ const BlogArchive = ({  blogData, categoryData }) => {
                     </Grid>
                 </Grid>
 
-                <Grid item container justifyContent="space-around" classes={{root: classes.blogCard}}>
+                <Grid item container justifyContent="center" classes={{root: classes.blogCard}}>
                     {!filterData ? (
                         blogData.map((item, i) => (
                             <BlogCard key={i} blog={item} />
