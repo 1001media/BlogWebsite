@@ -26,7 +26,7 @@ const useStyles = makeStyles({
     },
     Containergap : {
         paddingLeft: "7rem",
-        [theme.breakpoints.down("sm")]: {
+        [theme.breakpoints.down("md")]: {
             paddingLeft : 0
         }
     },
@@ -153,7 +153,7 @@ const NewsLatter = ({ setSnackBarMessage, setSnackBarColor, setShowSnackBar }) =
                 </Grid>
             </Grid>
 
-            <Grid item container direction="column" lg={5} justifyContent="center" alignItems="center">
+            <Grid item container direction="column" lg={5} md={12} justifyContent="center" alignItems="center">
                 <Grid item classes={{root: classes.inputContainer}}>
                     <input className={classes.input}  placeholder="Name" text type="name" value={name} onChange={handleChange}/>
                 </Grid>
