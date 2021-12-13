@@ -280,7 +280,7 @@ export const getStaticPaths  = async () => {
 
     const paths = datas.map(data => {
         return {
-            params: { id : data.heading, blogData: data }
+            params: { id : data.slug, blogData: data }
         }
     })
 
@@ -292,7 +292,7 @@ export const getStaticPaths  = async () => {
 
 export const getStaticProps = async (context) => {
     const id = context.params.id
-    const res = await fetch(`https://blogfiver.herokuapp.com/blogs/?heading=${id}`)
+    const res = await fetch(`https://blogfiver.herokuapp.com/blogs/?slug=${id}`)
     const res2 = await fetch('https://blogfiver.herokuapp.com/blogs')
     const data = await res.json()
     const data2 = await res2.json()

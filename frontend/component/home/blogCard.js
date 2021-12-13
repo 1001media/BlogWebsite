@@ -62,7 +62,7 @@ const BlogCard = ({ blog, isRelatedPost}) => {
     return (
         <>
                     <Grid item>
-                       <Link href={`/blogs/${blog.heading}`}>
+                       <Link href={`/blogs/${blog.slug}`}>
                         <Grid item container direction="column" classes={{root: classes.blogContainer}}>
                             <Grid item>
                                 <img className={classes.img} src={blog.image.url}  alt="machine" />
