@@ -15,6 +15,8 @@ import Footer from "../../component/footer"
 
 import Head from "next/head"
 
+import { useRouter } from 'next/router'
+
 const useStyles = makeStyles({
     mainContainer : {
       
@@ -173,8 +175,9 @@ const BlogPost = ({ blog, blogData }) => {
     const matchesMD = useMediaQuery(th => theme.breakpoints.down("md"))
 
 
-
+    const router = useRouter()
     
+    if(!blog) return null
 
     return (
         <>
@@ -285,14 +288,14 @@ export const getStaticPaths  = async () => {
 
     const paths = datas.map(data => {
         return {
-            params: { slug : data.slug.toString(), blogData: data, revalidate: 2, }, 
+            params: { slug : data.slug.toString(), blogData: data, }, 
             
         }
     })
 
     return {
         paths,
-        fallback: false,
+        fallback: true,
     }
 }
 
