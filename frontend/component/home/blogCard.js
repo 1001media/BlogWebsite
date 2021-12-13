@@ -17,7 +17,7 @@ const useStyles = makeStyles({
         marginTop: "3rem",
         cursor : "pointer",
         [theme.breakpoints.down("xs")]: {
-            width: "100%",
+            
             height: "20rem"
         }
     },

@@ -7,20 +7,32 @@ import ClientSection from "../component/home/client"
 import BlogSection from "../component/home/blogSection"
 import Footer from "../component/footer"
 
-import { Snackbar } from "@material-ui/core"
+import { Snackbar, makeStyles } from "@material-ui/core"
 
 import { useState } from "react"
+import theme from "../styles/theme"
 
 import Head from "next/head"
 
+const useStyles = makeStyles({
+  gap:{
+    padding: ".5rem",
+    [theme.breakpoints.down("sm")]: {
+      padding: 0
+    }
+  }
+})
+
 export default function Home({ blogData }) {
+
+  const classes = useStyles()
 
   const [ showSnackBar, setShowSnackBar ] = useState(false)
   const [ snackbarMessage, setSnackBarMessage ] = useState("")
   const [ snackBarColor, setSnackBarColor] = useState("")
 
   return (
-    <div style={{padding: ".5rem"}}>
+    <div className={classes.gap}>
       <Head>
           <title>Blog</title>
           <meta name="DC.title" content= 'Quality first'/>
