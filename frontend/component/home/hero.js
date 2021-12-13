@@ -7,7 +7,8 @@ import theme from "../../styles/theme"
 const useStyles = makeStyles({
     mainContainer :{
         width: "100%",
-        height : "25rem"
+        height : "25rem",
+        padding:"10px"
     },
     secondContainer: {
         backgroundColor: theme.palette.secondary.dark,
@@ -77,13 +78,13 @@ const Hero = () => {
             >
                 <Grid item>
                     <Typography variant="h2" classes={{root: classes.headlineText}}>
-                        Hero Headline
+                      Master Plan
                     </Typography>
                 </Grid>
 
                 <Grid item classes={{root: classes.gap}}>
                     <Typography variant="h2" classes={{root: classes.subHeadlineText}}>
-                       Main HERO Headline
+                       Welcome to My Blog
                     </Typography>
                 </Grid>
 
