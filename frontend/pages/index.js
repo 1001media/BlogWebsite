@@ -32,7 +32,7 @@ export default function Home({ blogData }) {
   const [ snackBarColor, setSnackBarColor] = useState("")
 
   return (
-    <div className={classes.gap}>
+    <div >
       <Head>
           <title>Blog</title>
           <meta name="DC.title" content= 'Quality first'/>

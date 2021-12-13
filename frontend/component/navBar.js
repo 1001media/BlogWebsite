@@ -1,5 +1,5 @@
 
-import { Grid, Button, Typography, useMediaQuery} from "@material-ui/core"
+import { Grid, Button, Typography, useMediaQuery, SwipeableDrawer} from "@material-ui/core"
 import { makeStyles } from "@material-ui/styles"
 
 
@@ -8,6 +8,7 @@ import Link from "next/link"
 
 import theme from "../styles/theme"
 
+import { useState } from "react"
 
 const useStyles = makeStyles({
     mainContainer : {
@@ -39,7 +40,8 @@ const useStyles = makeStyles({
         marginLeft: "2rem",
         [theme.breakpoints.down("sm")] : {
             marginTop: "1rem",
-            marginLeft: ".4rem",
+            position: "relative",
+            //marginLeft: ".4rem",
         }
     },
     linkContainer : {
@@ -111,12 +113,26 @@ const useStyles = makeStyles({
             borderRadius:10,
             backgroundColor: theme.palette.secondary.main
         }
-    }
+    },
+    drawer : {
+        backgroundColor : theme.palette.secondary.dark,
+        height : "100%",
+        width : "30vh",
+      },
+      menuBar: {
+          position :"absolute",
+          left: -10
+      },
+      draweItem : {
+          padding: "1.5rem"
+      }
 })
 
 
 const NavBar = () => {
     const classes = useStyles()
+
+    const [drawerOpen, setDrawerOpen] = useState(false)
 
     const datas = [
         {name: "Home", fill: true, href:"/", dropDown: false},
@@ -133,64 +149,98 @@ const NavBar = () => {
             <Grid 
             item 
             container 
-            justifyContent="flex-start" 
-            md={5} 
+            justifyContent={matchesSM ? "center" : "flex-start"} 
+            sm={5} 
             alignItems="center" 
             classes={{root: classes.secondContainer}}
             >
+                {matchesSM && (
+                <Grid onClick={() => setDrawerOpen(true)} item classes={{root: classes.menuBar}}>
+                    <img src="/menu.svg" />
+                </Grid>
+             
+            )}
                 <Link href="/">
                 <Grid item classes={{root: classes.logoContainer}}>
-                    <Typography variant="h1" classes={{root: classes.logoText}}>
+                    <Typography  variant="h1" classes={{root: classes.logoText}}>
                            H
                     </Typography>
                 </Grid>
                 </Link>
                 <Grid item>
-                    <Typography align="center" classes={{root: classes.siteNameText}}>
+                    <Typography  classes={{root: classes.siteNameText}}>
                         Site Title
                     </Typography>
                 </Grid>
             </Grid>
 
-            <Grid item container md={6} justifyContent="space-around" classes={{root: classes.linkContainer}}>
-                {datas.map((data, i) => (
-                     !data.dropDown ? (
-                        <Grid item key={i}>
-                        <Link href={data.href}>
-                        <Button 
-                        variant={data.fill ? "contained" : undefined} 
-                        color="secondary"
+            {!matchesSM ? (
+            <Grid item container sm={6} justifyContent="space-around" classes={{root: classes.linkContainer}}>
+            {datas.map((data, i) => (
+                 !data.dropDown ? (
+                    <Grid item key={i}>
+                    <Link href={data.href}>
+                    <Button 
+                    variant={data.fill ? "contained" : undefined} 
+                    color="secondary"
+                    classes={{root: clsx({
+                        [classes.infoMainBtn] :  data.fill
+                    })}}
+                    >
+                        <Typography 
+                        variant="h2" 
+                        align="center"
                         classes={{root: clsx({
+                            [classes.infoText] : !data.fill,
                             [classes.infoMainBtn] :  data.fill
                         })}}
                         >
-                            <Typography 
-                            variant="h2" 
-                            align="center"
-                            classes={{root: clsx({
-                                [classes.infoText] : !data.fill,
-                                [classes.infoMainBtn] :  data.fill
-                            })}}
-                            >
-                                {data.name}
-                            </Typography>
-                        </Button>
-                        </Link>
+                            {data.name}
+                        </Typography>
+                    </Button>
+                    </Link>
+                </Grid>
+                 ) : (
+                    <Grid item classes={{root:  classes.nav}}>
+                        <li className={classes.navListItem}>Review
+                            <ul className={classes.navListItemdrop}>
+                                <li className={classes.item}>Certificate</li>
+                                <li className={classes.item}>Downloads</li>
+                                <li className={classes.item}>Reviews</li>
+                                <li className={classes.item}>Tools</li>
+                            </ul>
+                        </li>
                     </Grid>
-                     ) : (
-                        <Grid item classes={{root:  classes.nav}}>
-                            <li className={classes.navListItem}>Review
-                                <ul className={classes.navListItemdrop}>
-                                    <li className={classes.item}>Certificate</li>
-                                    <li className={classes.item}>Downloads</li>
-                                    <li className={classes.item}>Reviews</li>
-                                    <li className={classes.item}>Tools</li>
-                                </ul>
-                            </li>
+                 )
+            ))}
+        </Grid>
+            ): (
+                drawerOpen ? (
+                    <SwipeableDrawer
+                    open = {drawerOpen} 
+                    onOpen = {() => setDrawerOpen(true)} 
+                    onClose = {() => setDrawerOpen(false)}
+                    disableBackdropTransition={false} 
+                    disableDiscovery={false}
+                    anchor="left"
+                    classes={{ paper:classes.drawer }}
+                    >
+                        <Grid container>
+                            <Grid item container direction="column" alignItems="center">
+                                {datas.map((data, i) => (
+                                    <Link href={data.href}>
+                                    <Button variant="secondary" classes={{root: classes.draweItem}}>
+                                        <Typography>
+                                            {data.name}
+                                        </Typography>
+                                    </Button>
+                                    </Link>
+                                ))}
+                            </Grid>
                         </Grid>
-                     )
-                ))}
-            </Grid>
+                    </SwipeableDrawer>
+                ) : null
+            )}
         </Grid>
     )
 }
