@@ -134,7 +134,7 @@ const NavBar = () => {
             item 
             container 
             justifyContent="flex-start" 
-            lg={5} 
+            md={5} 
             alignItems="center" 
             classes={{root: classes.secondContainer}}
             >
@@ -152,7 +152,7 @@ const NavBar = () => {
                 </Grid>
             </Grid>
 
-            <Grid item container lg={6} justifyContent="space-around" classes={{root: classes.linkContainer}}>
+            <Grid item container md={6} justifyContent="space-around" classes={{root: classes.linkContainer}}>
                 {datas.map((data, i) => (
                      !data.dropDown ? (
                         <Grid item key={i}>

@@ -48,7 +48,10 @@ const useStyles = makeStyles({
     },
     avatarContainer : {
         position: "relative",
-        right : 300
+        right : 300,
+        [theme.breakpoints.down("md")]: {
+            right: 250
+        }
     },
     blogPostContainer : {
         backgroundColor :"#D8E4F0",
@@ -167,7 +170,7 @@ const useStyles = makeStyles({
 const BlogPost = ({ blog, blogData }) => {
     const classes = useStyles()
 
-    const matchesSM = useMediaQuery(th => theme.breakpoints.down("sm"))
+    const matchesMD = useMediaQuery(th => theme.breakpoints.down("md"))
 
 
 
@@ -181,7 +184,7 @@ const BlogPost = ({ blog, blogData }) => {
             <meta name="keywords" content={blog?.metakeywords} />
             <meta name="description" content={blog?.metadescription} />
         </Head>
-        <div style={{marginTop: "1rem", marginLeft: "1rem", marginRight: "1rem"}}>
+        
         <NavBar />
         <Hero />
         <Grid container classes={{root: classes.mainContainer}} >
@@ -197,7 +200,7 @@ const BlogPost = ({ blog, blogData }) => {
                     <Typography align="center" classes={{root:classes.titleText}}>
                         {blog[0].heading}
                     </Typography>
-                    <Typography align={matchesSM ? "center" : undefined} classes={{root: classes.subTitleText}}>
+                    <Typography align={matchesMD ? "center" : undefined} classes={{root: classes.subTitleText}}>
                           Category: {blog[0].category} Date:{blog[0].date} 
                     </Typography>
                 </Grid>
@@ -237,7 +240,7 @@ const BlogPost = ({ blog, blogData }) => {
             </Grid> 
 
             
-            {matchesSM ? undefined : (
+            {matchesMD ? undefined : (
 
            <Grid item container classes={{root: classes.slideBar}}>
               <Grid item container direction="column" alignItems="center" justifyContent="space-around" > 
@@ -269,7 +272,7 @@ const BlogPost = ({ blog, blogData }) => {
           )}
              <Footer /> 
         </Grid> 
-        </div>
+       
         </>
     )
 }

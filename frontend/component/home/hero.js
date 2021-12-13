@@ -64,7 +64,7 @@ const useStyles = makeStyles({
 const Hero = () => {
     const classes = useStyles()
 
-    const matchesSM = useMediaQuery(th => theme.breakpoints.down("sm"))
+    const matchesMD = useMediaQuery(th => theme.breakpoints.down("md"))
 
     return (
         <Grid container classes={{root: classes.mainContainer}}>
@@ -76,7 +76,7 @@ const Hero = () => {
             direction="column" 
             classes={{root: classes.secondContainer}}
             justifyContent="center"
-            alignItems={ matchesSM ? "center" : undefined}
+            alignItems={ matchesMD ? "center" : undefined}
             >
                 <Grid item>
                     <Typography variant="h2" classes={{root: classes.headlineText}}>
@@ -106,7 +106,7 @@ const Hero = () => {
                     </Button>
                 </Grid>
             </Grid>
-            { matchesSM ? undefined : (
+            { matchesMD ? undefined : (
             <Grid item container lg={4} classes={{root: classes.imageContainer}}>
                 <img src="/heroImg.jpg" className={classes.img}/>
             </Grid>

@@ -27,7 +27,7 @@ const useStyles = makeStyles({
         display : "flex",
         justifyContent : "center",
         alignItems : "center",
-        [theme.breakpoints.down("sm")] : {
+        [theme.breakpoints.down("md")] : {
             marginTop: "1rem"
         }
     },

@@ -14,7 +14,7 @@ import axios from "axios"
 const useStyles = makeStyles({
     mainContainer : {
         height : "13rem",
-        [theme.breakpoints.down("sm")] : {
+        [theme.breakpoints.down("md")] : {
             height : "auto"
         },
         width : "100%",
@@ -88,6 +88,9 @@ const useStyles = makeStyles({
         height: "3rem",
         [theme.breakpoints.down("sm")] : {
             width: "100%"
+        },
+        [theme.breakpoints.down("md")] : {
+            paddingBottom: "1rem"
         }
     }
 })
@@ -99,7 +102,7 @@ const NewsLatter = ({ setSnackBarMessage, setSnackBarColor, setShowSnackBar }) =
     const [email, setEmail] = useState("")
     const [isPost, setIsPost] = useState(false)
 
-    const matchesSM = useMediaQuery(th => theme.breakpoints.down("sm"))
+    const matchesMD = useMediaQuery(th => theme.breakpoints.down("md"))
 
     const handleChange = e => {
         e.preventDefault()
@@ -133,16 +136,16 @@ const NewsLatter = ({ setSnackBarMessage, setSnackBarColor, setShowSnackBar }) =
             lg={7} 
             direction="column" 
             justifyContent="center" 
-            alignItems={matchesSM ? "center" : "flex-start"}
+            alignItems={matchesMD ? "center" : "flex-start"}
             classes={{root: classes.Containergap}}
             >
                 <Grid item>
-                    <Typography align={matchesSM ? "center" : undefined} variant='h1' classes={{root : classes.heading}}> 
+                    <Typography align={matchesMD ? "center" : undefined} variant='h1' classes={{root : classes.heading}}> 
                         Newsletter Subscription
                     </Typography>
                 </Grid>
                 <Grid item classes={{root: classes.inlineGap}}> 
-                    <Typography variant="h1" align={matchesSM ? "center" : undefined}  classes={{root: classes.text}}>
+                    <Typography variant="h1" align={matchesMD ? "center" : undefined}  classes={{root: classes.text}}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec 
                         odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla 
                         quis sem at nibh elementum imperdiet.
