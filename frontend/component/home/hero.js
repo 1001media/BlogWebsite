@@ -8,7 +8,7 @@ const useStyles = makeStyles({
     mainContainer :{
         width: "100%",
         height : "25rem",
-        padding:"10px"
+        padding:"10rem"
     },
     secondContainer: {
         backgroundColor: theme.palette.secondary.dark,
