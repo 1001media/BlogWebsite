@@ -48,7 +48,7 @@ const BlogSection = ({ blogData }) => {
             <Grid item container direction="column" alignItems="center" classes={{root: classes.headingContainer}}>
                 <Grid item>
                     <Typography classes={{root: classes.headingText}}>
-                        Blog Section Title
+             Welcome to My Blog
                     </Typography>
                 </Grid>
                 <Grid item>
