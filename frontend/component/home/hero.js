@@ -11,6 +11,9 @@ const useStyles = makeStyles({
     },
     secondContainer: {
         backgroundColor: theme.palette.secondary.dark,
+        [theme.breakpoints.down("xl")]: {
+            paddingLeft : "5rem"
+        },
         [theme.breakpoints.down("lg")]: {
             paddingLeft : "5rem"
         },
