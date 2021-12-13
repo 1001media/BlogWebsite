@@ -117,13 +117,11 @@ const NewsLatter = ({ setSnackBarMessage, setSnackBarColor, setShowSnackBar }) =
             setShowSnackBar(true)
             setSnackBarColor("green")
             setSnackBarMessage("Name and Email successfully uploaded")
-            console.log(res.data)
         }).catch(error => {
             setIsPost(false)
             setShowSnackBar(true)
             setSnackBarColor("red")
             setSnackBarMessage("Error uploading name and email please try again letter")
-            console.log(error)
         })
     }
 

@@ -168,8 +168,7 @@ const BlogPost = ({ blog, blogData }) => {
 
     const matchesSM = useMediaQuery(th => theme.breakpoints.down("sm"))
 
-    console.log(blogData)
-    console.log(blog)
+
 
     
 
