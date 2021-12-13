@@ -15,7 +15,7 @@ import Footer from "../../component/footer"
 
 import Head from "next/head"
 
-import { useRouter } from 'next/router'
+
 
 const useStyles = makeStyles({
     mainContainer : {
@@ -174,10 +174,14 @@ const BlogPost = ({ blog, blogData }) => {
 
     const matchesMD = useMediaQuery(th => theme.breakpoints.down("md"))
 
-
-    const router = useRouter()
     
-    if(!blog) return null
+    if(!blog) return (
+        <Grid container alignItems="center" justifyContent="center">
+            <Grid item>
+                <h3>Loading...</h3>
+            </Grid>
+        </Grid>
+    )
 
     return (
         <>
