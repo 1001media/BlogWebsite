@@ -83,7 +83,7 @@ const Hero = () => {
 
                 <Grid item classes={{root: classes.gap}}>
                     <Typography variant="h2" classes={{root: classes.subHeadlineText}}>
-                        Hero subHeadline
+                       Main HERO Headline
                     </Typography>
                 </Grid>
 
