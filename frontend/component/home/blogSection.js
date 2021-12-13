@@ -57,7 +57,7 @@ const BlogSection = ({ blogData }) => {
                     </Typography>
                 </Grid>
             </Grid>
-                <Grid item container justifyContent="space-around">
+                <Grid item container justifyContent="center">
                 {blogData?.map((blog, i) => (
                     <BlogCard isRelatedPost={false} key={i} blog={blog}/>
                 ))}
