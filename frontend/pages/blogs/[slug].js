@@ -285,13 +285,14 @@ export const getStaticPaths  = async () => {
 
     const paths = datas.map(data => {
         return {
-            params: { slug : data.slug.toString(), blogData: data }
+            params: { slug : data.slug.toString(), blogData: data, revalidate: 2, }, 
+            
         }
     })
 
     return {
         paths,
-        fallback: false
+        fallback: false,
     }
 }
 

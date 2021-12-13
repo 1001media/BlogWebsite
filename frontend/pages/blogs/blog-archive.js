@@ -215,6 +215,6 @@ export const getStaticProps = async() => {
 
     return {
         props: { blogData: data, categoryData: data2 },
-        revalidate: 60
+        revalidate: 10
     }
 }
