@@ -14,7 +14,7 @@ import Head from "next/head"
 const useStyles = makeStyles({
     mainContainer : {
         backgroundColor : theme.palette.primary.main,
-        height :"auto"
+        height :"auto",
     },
     titleText:  {
         color: "#fff",
@@ -136,13 +136,16 @@ const BlogArchive = ({ data }) => {
 
             <Grid item container>
                 <Grid item container justifyContent="space-around" classes={{root: classes.categoryContainer}}>
-                {data.map((item, i) => (
-                    <Grid item key={i} onClick={() => handleFilter(item.category)}>
+                {data.map((item, i) => {
+
+                    return (
+                        <Grid item key={i} onClick={() => handleFilter(item.category)}>
                         <Typography classes={{root: classes.categoryText}}>
                             {item.category}
                         </Typography>
-                    </Grid>
-                ))}
+                       </Grid>
+                    )
+                  })}
                 {filterData && (
                     <Grid item>
                         <Button onClick={handleCancel}>

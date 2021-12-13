@@ -169,6 +169,9 @@ const BlogPost = ({ blog, blogData }) => {
     const matchesSM = useMediaQuery(th => theme.breakpoints.down("sm"))
 
     console.log(blogData)
+    console.log(blog)
+
+    
 
     return (
         <>
@@ -191,10 +194,10 @@ const BlogPost = ({ blog, blogData }) => {
                 </Grid>
                 <Grid item>
                     <Typography align="center" classes={{root:classes.titleText}}>
-                        {blog.heading}
+                        {blog[0].heading}
                     </Typography>
                     <Typography align={matchesSM ? "center" : undefined} classes={{root: classes.subTitleText}}>
-                          Category: {blog.category} Date:{blog.createdAt} 
+                          Category: {blog[0].category} Date:{blog[0].date} 
                     </Typography>
                 </Grid>
             </Grid>
@@ -205,12 +208,14 @@ const BlogPost = ({ blog, blogData }) => {
             <Grid item container classes={{root: classes.textContainer}} alignItems="center" direction="column">
 
                 <Grid item classes={{root: classes.imageContainer}}>
-                    <img className={classes.img} src={blog.image.url} alt="machine" />
+                
+                <img className={classes.img} src={blog[0].image.url} alt="machine" />
+
                 </Grid>
 
                 <Grid item container >
                     <Grid item>
-                        <ReactMarkdown className={classes.text}>{blog.blogText}</ReactMarkdown>
+                        <ReactMarkdown className={classes.text}>{blog[0].blogText}</ReactMarkdown>
                     </Grid>
                 </Grid>
             </Grid>
@@ -262,7 +267,7 @@ const BlogPost = ({ blog, blogData }) => {
           </Grid>
           )}
              <Footer /> 
-        </Grid>     
+        </Grid> 
         </>
     )
 }
@@ -275,7 +280,7 @@ export const getStaticPaths  = async () => {
 
     const paths = datas.map(data => {
         return {
-            params: { id : data.id.toString(), blogData: data }
+            params: { id : data.heading, blogData: data }
         }
     })
 
@@ -287,7 +292,7 @@ export const getStaticPaths  = async () => {
 
 export const getStaticProps = async (context) => {
     const id = context.params.id
-    const res = await fetch(`https://blogfiver.herokuapp.com/blogs/${id}`)
+    const res = await fetch(`https://blogfiver.herokuapp.com/blogs/?heading=${id}`)
     const res2 = await fetch('https://blogfiver.herokuapp.com/blogs')
     const data = await res.json()
     const data2 = await res2.json()

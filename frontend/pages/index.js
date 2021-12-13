@@ -20,7 +20,7 @@ export default function Home({ blogData }) {
   const [ snackBarColor, setSnackBarColor] = useState("")
 
   return (
-    <div>
+    <div style={{padding: ".5rem"}}>
       <Head>
           <title>Blog</title>
           <meta name="DC.title" content= 'Quality first'/>
