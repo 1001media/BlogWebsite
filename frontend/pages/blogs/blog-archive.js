@@ -80,15 +80,16 @@ const useStyles = makeStyles({
     }
 }) 
 
-const BlogArchive = ({ data }) => {
+const BlogArchive = ({  blogData, categoryData }) => {
     const classes = useStyles()
 
     const [filterData, setFilterData] = useState(null)
     const [searchText, setSearchText] = useState("")
 
     const handleFilter = name => {
-        const datas = data.filter(item => item.category === name)
+        const datas = categoryData.filter(item => item.name === name)
         setFilterData(datas)
+        console.log(filterData)
     }
 
     const handleCancel = () => {
@@ -98,7 +99,7 @@ const BlogArchive = ({ data }) => {
 
     const handleSearch = () => {
         (searchText)
-            data.filter(val => {
+            blogData.filter(val => {
                 if(searchText === "") {
                     return null
                 }else if(val.heading.toLowerCase().includes(searchText.toLowerCase())) {
@@ -106,6 +107,9 @@ const BlogArchive = ({ data }) => {
                 }
         })
     }
+
+
+
 
     return (
         <>
@@ -136,12 +140,12 @@ const BlogArchive = ({ data }) => {
 
             <Grid item container>
                 <Grid item container justifyContent="space-around" classes={{root: classes.categoryContainer}}>
-                {data.map((item, i) => {
+                {categoryData.map((item, i) => {
 
                     return (
-                        <Grid item key={i} onClick={() => handleFilter(item.category)}>
+                        <Grid item key={i} onClick={() => handleFilter(item.name)}>
                         <Typography classes={{root: classes.categoryText}}>
-                            {item.category}
+                            {item.name}
                         </Typography>
                        </Grid>
                     )
@@ -178,11 +182,13 @@ const BlogArchive = ({ data }) => {
 
                 <Grid item container justifyContent="space-around" classes={{root: classes.blogCard}}>
                     {!filterData ? (
-                        data.map((item, i) => (
+                        blogData.map((item, i) => (
                             <BlogCard key={i} blog={item} />
                         ))
                     ): filterData.map((item, i) => (
-                        <BlogCard blog={item} key={i} />
+                        item.blogs.map((data, i) => (
+                            <BlogCard blog={data} key={i} isArchive={true}/>
+                        ))
                     ))}
                 </Grid>
             </Grid>
@@ -196,10 +202,12 @@ export default  BlogArchive
 
 export const getStaticProps = async() => {
     const res = await fetch('https://blogfiver.herokuapp.com/blogs')
+    const res2 = await fetch('https://blogfiver.herokuapp.com/categories')
     const data = await res.json()
+    const data2 = await res2.json()
 
     return {
-        props: { data },
+        props: { blogData: data, categoryData: data2 },
         revalidate: 60
     }
 }

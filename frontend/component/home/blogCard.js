@@ -54,18 +54,19 @@ const useStyles = makeStyles({
     },
 })
 
-const BlogCard = ({ blog, isRelatedPost}) => {
+const BlogCard = ({ blog, isRelatedPost, isArchive}) => {
     const classes = useStyles({ isRelatedPost })
 
-    
-
+    if(isArchive) {
+        console.log(blog)
+    }
     return (
         <>
                     <Grid item>
-                       <Link href={`/blogs/${blog.slug}`}>
+                    <Link href={`/blogs/${blog.slug}`}>
                         <Grid item container direction="column" classes={{root: classes.blogContainer}}>
                             <Grid item>
-                                <img className={classes.img} src={blog.image.url}  alt="machine" />
+                                <img className={classes.img} src={blog?.image.url}  alt="machine" />
                             </Grid>
                             <Grid item>
                                 <Typography  classes={{root: classes.cardHeadingText}}>
