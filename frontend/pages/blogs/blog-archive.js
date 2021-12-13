@@ -103,6 +103,7 @@ const BlogArchive = ({  blogData, categoryData }) => {
     const handleSearch = () => {
         (searchText)
         setIsSearch(true)
+        setFilterData(null)
             blogData.filter(val => {
                 if(searchText === "") {
                     return null
