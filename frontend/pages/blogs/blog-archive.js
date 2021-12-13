@@ -84,21 +84,25 @@ const BlogArchive = ({  blogData, categoryData }) => {
     const classes = useStyles()
 
     const [filterData, setFilterData] = useState(null)
+    const [isSearch, setIsSearch] = useState(null)
     const [searchText, setSearchText] = useState("")
 
     const handleFilter = name => {
+        setIsSearch(false)
         const datas = categoryData.filter(item => item.name === name)
         setFilterData(datas)
         console.log(filterData)
     }
 
     const handleCancel = () => {
+        setIsSearch(false)
         setFilterData(null)
         setSearchText("")
     }
 
     const handleSearch = () => {
         (searchText)
+        setIsSearch(true)
             blogData.filter(val => {
                 if(searchText === "") {
                     return null
@@ -186,9 +190,11 @@ const BlogArchive = ({  blogData, categoryData }) => {
                             <BlogCard key={i} blog={item} />
                         ))
                     ): filterData.map((item, i) => (
-                        item.blogs.map((data, i) => (
+                        !isSearch ? item.blogs.map((data, i) => (
                             <BlogCard blog={data} key={i} isArchive={true}/>
-                        ))
+                        )): (
+                            <BlogCard blog={item} key={i} />
+                        )
                     ))}
                 </Grid>
             </Grid>
