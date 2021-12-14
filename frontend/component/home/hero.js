@@ -7,8 +7,8 @@ import theme from "../../styles/theme"
 const useStyles = makeStyles({
     mainContainer :{
         width: "100%",
-        height : "400px",
-        background: "#000"
+        height : "500px",
+        background: "#f9f1ef"
         
     },
     secondContainer: {
