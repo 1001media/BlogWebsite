@@ -83,7 +83,7 @@ const useStyles = makeStyles({
         top: "1rem",
         left: "-1rem",
         boxShadow: "0 0 10px grey300",
-        backgroundColor : "#CCC3C5",
+       background: "rgba(255,0,0,0.3)",
         opacity: 0,
         width: "10rem",
         borderRadius: 10,
