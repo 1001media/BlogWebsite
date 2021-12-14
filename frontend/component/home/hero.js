@@ -80,7 +80,7 @@ const Hero = () => {
             >
                 <Grid item>
                     <Typography variant="h2" classes={{root: classes.headlineText}}>
-                        Join My InnerCircle
+                        Join US
                     </Typography>
                 </Grid>
 
@@ -101,7 +101,7 @@ const Hero = () => {
                 <Grid item classes={{root: classes.gap}}>
                     <Button variant="contained" color="primary" classes={{root: classes.btn}}>
                         <Typography variant="h1" classes={{root: classes.btnText}}>
-                            Learn More
+                            Learn More 
                         </Typography>
                     </Button>
                 </Grid>
