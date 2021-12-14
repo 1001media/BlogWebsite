@@ -7,7 +7,7 @@ import theme from "../../styles/theme"
 const useStyles = makeStyles({
     mainContainer :{
         width: "100%",
-        height : "500px",
+        height : "557px",
         background: "#f9f1ef"
         
     },
