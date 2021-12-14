@@ -7,7 +7,9 @@ import theme from "../../styles/theme"
 const useStyles = makeStyles({
     mainContainer :{
         width: "100%",
-        height : "40rem"
+        height : "400px",
+        background: "#000"
+        
     },
     secondContainer: {
         backgroundColor: theme.palette.secondary.dark,
