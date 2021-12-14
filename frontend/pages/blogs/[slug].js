@@ -15,7 +15,7 @@ import Footer from "../../component/footer"
 
 import Head from "next/head"
 
-
+import style from  "../../styles/Markdown.module.css"
 
 const useStyles = makeStyles({
     mainContainer : {
@@ -30,7 +30,7 @@ const useStyles = makeStyles({
         marginTop: "3rem",
         paddingBottom: "2rem" ,
         [theme.breakpoints.down("sm")] :{
-            marginTop: "0rem",
+            marginTop: "1rem",
             paddingBottom: "0"
         }
     },
@@ -59,7 +59,10 @@ const useStyles = makeStyles({
         backgroundColor :"#D8E4F0",
         height : "auto",
         width : "100%",
-        position : "absolute"
+        position : "absolute",
+        [theme.breakpoints.down("sm")]: {
+            backgroundColor : "#F5FFFA"
+        }
     },
     textContainer : {
         marginTop: "7rem",
@@ -108,10 +111,17 @@ const useStyles = makeStyles({
         paddingRight: "5rem",
         fontWeight: 500,
         fontSize: "1rem",
+        overflow: "hidden",
+
         [theme.breakpoints.down("sm")]: {
             paddingLeft: "2rem",
             paddingRight: "2rem"
         }
+    },
+    markdownContainer: {
+        width: "100%",
+        height: "auto",
+        
     },
     slideBar : {
         width: "16rem",
@@ -169,10 +179,14 @@ const useStyles = makeStyles({
     }
 })
 
+
+
 const BlogPost = ({ blog, blogData }) => {
     const classes = useStyles()
 
     const matchesMD = useMediaQuery(th => theme.breakpoints.down("md"))
+
+    console.log(blog)
 
     
     if(!blog) return (
@@ -192,7 +206,7 @@ const BlogPost = ({ blog, blogData }) => {
             <meta name="description" content={blog?.metadescription} />
         </Head>
         
-        <NavBar />
+        <NavBar/>
         <Hero />
         <Grid container classes={{root: classes.mainContainer}} >
             <Grid item container  alignItems="center" justifyContent="center" classes={{root: classes.secondContainer}}>
@@ -224,9 +238,13 @@ const BlogPost = ({ blog, blogData }) => {
 
                 </Grid>
 
-                <Grid item container >
+                <Grid item container classes={{root: classes.markdownContainer}}>
                     <Grid item>
-                        <ReactMarkdown className={classes.text}>{blog[0].blogText}</ReactMarkdown>
+                        <ReactMarkdown 
+                        className={style.article}
+                        >
+                            {blog[0].blogText}
+                        </ReactMarkdown>
                     </Grid>
                 </Grid>
             </Grid>
@@ -279,8 +297,20 @@ const BlogPost = ({ blog, blogData }) => {
           )}
              <Footer /> 
         </Grid> 
+        <div className="article">
+            <p>bed</p>
+        </div>
+        <style jsx>{`
+        .article p{
+            word-spacing: 5px;
+            font-size: 1rem;
+            line-height:2rem
+        }
+        }
+      `}</style>
        
         </>
+        
     )
 }
 
