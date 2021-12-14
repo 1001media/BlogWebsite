@@ -279,7 +279,7 @@ const BlogPost = ({ blog, blogData }) => {
                 <img  className={classes.sildeBarImage} src="/hero-image.png" alt="machine" />
             </Grid>
             <Grid item>
-                <Typography align="center" classes={{root: classes.slideBarDescriptionText}}>
+                <Typography align="justify" classes={{root: classes.slideBarDescriptionText}}>
                    Get the best advice on digital marketing and search engine optimization.
                 </Typography>
            </Grid>
