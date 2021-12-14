@@ -108,7 +108,7 @@ const Hero = () => {
             </Grid>
             { matchesMD ? undefined : (
             <Grid item container lg={4} classes={{root: classes.imageContainer}}>
-                <img src="/heroImg.jpg" className={classes.img}/>
+                <img src="/hero-image.png" className={classes.img}/>
             </Grid>
             )}
         </Grid>
