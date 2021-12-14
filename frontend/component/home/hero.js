@@ -80,7 +80,7 @@ const Hero = () => {
             >
                 <Grid item>
                     <Typography variant="h2" classes={{root: classes.headlineText}}>
-                        Join US
+                        Join Us
                     </Typography>
                 </Grid>
 
