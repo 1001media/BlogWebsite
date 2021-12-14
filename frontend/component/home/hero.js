@@ -80,13 +80,13 @@ const Hero = () => {
             >
                 <Grid item>
                     <Typography variant="h2" classes={{root: classes.headlineText}}>
-                        Hero Headline
+                        Join My InnerCircle
                     </Typography>
                 </Grid>
 
                 <Grid item classes={{root: classes.gap}}>
                     <Typography variant="h2" classes={{root: classes.subHeadlineText}}>
-                        Hero subHeadline
+                        Get latest hacks & insights right in  your inbox.
                     </Typography>
                 </Grid>
 
