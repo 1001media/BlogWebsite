@@ -130,7 +130,7 @@ const useStyles = makeStyles({
         borderRadius: 20,
         position: "relative",
         bottom: "70rem",
-        left: "30rem"
+        left: "31rem"
     },
     slideBarHeaderText: {
         fontWeight: "bold",
@@ -185,8 +185,7 @@ const BlogPost = ({ blog, blogData }) => {
     const classes = useStyles()
 
     const matchesMD = useMediaQuery(th => theme.breakpoints.down("md"))
-
-    console.log(blog)
+    const matchesSM = useMediaQuery(th => theme.breakpoints.down("sm"))
 
     
     if(!blog) return (
@@ -210,13 +209,15 @@ const BlogPost = ({ blog, blogData }) => {
         <Hero />
         <Grid container classes={{root: classes.mainContainer}} >
             <Grid item container  alignItems="center" justifyContent="center" classes={{root: classes.secondContainer}}>
-               <Grid item classes={{root: classes.avatarContainer}}>
-                   <Link href="/">
-                   <Avatar classes={{root: classes.avatar}}>
-                       <Typography>{"<-"}</Typography>
-                   </Avatar>
-                   </Link>
-                </Grid>
+                {matchesSM ? null : (
+                                   <Grid item classes={{root: classes.avatarContainer}}>
+                                   <Link href="/">
+                                   <Avatar classes={{root: classes.avatar}}>
+                                       <Typography>{"<-"}</Typography>
+                                   </Avatar>
+                                   </Link>
+                                </Grid>
+                )}
                 <Grid item>
                     <Typography align="center" classes={{root:classes.titleText}}>
                         {blog[0].heading}
