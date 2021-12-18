@@ -1,13 +1,13 @@
 import { Grid, Typography, Button } from "@material-ui/core"
 import { makeStyles } from "@material-ui/core"
-import theme from "../../styles/theme"
+import theme from "../styles/theme"
 
 import { useState } from "react"
 
-import  NavBar from "../../component/navBar"
-import Footer from "../../component/footer"
-import Hero from "../../component/home/hero"
-import BlogCard from "../../component/home/blogCard"
+import  NavBar from "../component/navBar"
+import Footer from "../component/footer"
+import Hero from "../component/home/hero"
+import BlogCard from "../component/home/blogCard"
 
 import Head from "next/head"
 

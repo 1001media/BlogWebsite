@@ -138,7 +138,7 @@ const NavBar = () => {
         {name: "Home", fill: true, href:"/", dropDown: false},
         {name: "About", fill: false, href:"#", dropDown: false},
         {name: "Reviews", fill: false, href:"#", dropDown: true},
-        {name: "Blog", fill: false, href: "/blogs/blog-archive"},
+        {name: "Blog", fill: false, href: "/blog-archive"},
         {name: "Contact", fill: false, href: '#', dropDown: false}
     ]
 

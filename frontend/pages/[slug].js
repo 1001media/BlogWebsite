@@ -1,21 +1,21 @@
 import { Grid, Typography, Avatar, Button, useMediaQuery} from "@material-ui/core"
 
 import { makeStyles } from "@material-ui/styles"
-import theme from "../../styles/theme"
+import theme from "../styles/theme"
 
-import NavBar from "../../component/navBar"
-import Hero from "../../component/home/hero"
+import NavBar from "../component/navBar"
+import Hero from "../component/home/hero"
 
 import Link from "next/link"
 
 import ReactMarkdown from "react-markdown"
 
-import BlogCard from "../../component/home/blogCard"
-import Footer from "../../component/footer"
+import BlogCard from "../component/home/blogCard"
+import Footer from "../component/footer"
 
 import Head from "next/head"
 
-import style from  "../../styles/Markdown.module.css"
+import style from  "../styles/Markdown.module.css"
 
 const useStyles = makeStyles({
     mainContainer : {
