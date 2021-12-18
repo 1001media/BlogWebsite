@@ -49,7 +49,8 @@ const useStyles = makeStyles({
         "&::placeholder" : {
             color: "black",
             fontWeight :400,
-            fontSize : "1.2rem"
+            fontSize : "1.2rem",
+            borderRadius : "10",
         },
         "&::label" : {
             color: "#fff",
@@ -63,7 +64,7 @@ const useStyles = makeStyles({
         marginLeft: "1rem",
         width: "8rem",
         height: "3rem",
-        borderRadius : "0",
+        borderRadius : "1",
         "&:hover" : {
             backgroundColor: theme.palette.secondary.main
         },
