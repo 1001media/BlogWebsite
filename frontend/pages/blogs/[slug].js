@@ -196,13 +196,15 @@ const BlogPost = ({ blog, blogData }) => {
         </Grid>
     )
 
+    console.log()
+
     return (
         <>
         <Head>
-            <title>{blog?.heading}</title>
-            <meta name="DC.title" content={blog?.metatitle} />
-            <meta name="keywords" content={blog?.metakeywords} />
-            <meta name="description" content={blog?.metadescription} />
+            <title>{blog[0]?.heading}</title>
+            <meta name="DC.title" content={blog[0]?.metatitle} />
+            <meta name="keywords" content={blog[0]?.metakeywords} />
+            <meta name="description" content={blog[0]?.metadescription} />
         </Head>
         
         <NavBar/>
