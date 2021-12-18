@@ -7,7 +7,9 @@ import theme from "../../styles/theme"
 const useStyles = makeStyles({
     mainContainer :{
         width: "100%",
-        height : "25rem"
+        height : "557px",
+        background: "#f9f1ef"
+        
     },
     secondContainer: {
         backgroundColor: theme.palette.secondary.dark,
@@ -80,13 +82,13 @@ const Hero = () => {
             >
                 <Grid item>
                     <Typography variant="h2" classes={{root: classes.headlineText}}>
-                        Hero Headline
+                        Join Us
                     </Typography>
                 </Grid>
 
                 <Grid item classes={{root: classes.gap}}>
                     <Typography variant="h2" classes={{root: classes.subHeadlineText}}>
-                        Hero subHeadline
+                        Get latest hacks & insights right in  your inbox.
                     </Typography>
                 </Grid>
 
@@ -101,14 +103,14 @@ const Hero = () => {
                 <Grid item classes={{root: classes.gap}}>
                     <Button variant="contained" color="primary" classes={{root: classes.btn}}>
                         <Typography variant="h1" classes={{root: classes.btnText}}>
-                            Learn More
+                            Learn More 
                         </Typography>
                     </Button>
                 </Grid>
             </Grid>
             { matchesMD ? undefined : (
             <Grid item container lg={4} classes={{root: classes.imageContainer}}>
-                <img src="/heroImg.jpg" className={classes.img}/>
+                <img src="/hero-image.png" className={classes.img}/>
             </Grid>
             )}
         </Grid>

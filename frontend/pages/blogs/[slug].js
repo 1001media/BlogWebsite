@@ -274,18 +274,15 @@ const BlogPost = ({ blog, blogData }) => {
               <Grid item container direction="column" alignItems="center" justifyContent="space-around" > 
            <Grid item>
                 <Typography classes={{root: classes.slideBarHeaderText}}>
-                   Slide Bar
+                  Digital Marketing
                 </Typography>
             </Grid>
             <Grid item classes={{root: classes.slideBarImageContainer}}>
-                <img  className={classes.sildeBarImage} src="/machine.jpg" alt="machine" />
+                <img  className={classes.sildeBarImage} src="/hero-image.png" alt="machine" />
             </Grid>
             <Grid item>
-                <Typography align="center" classes={{root: classes.slideBarDescriptionText}}>
-                    Lorem ipsum dolor sit amet, 
-                    consectetur adipiscing elit. Integer 
-                    nec odio. Praesent libero. Sed 
-                    cursus ante dapibus diam. Sed nisi.
+                <Typography align="justify" classes={{root: classes.slideBarDescriptionText}}>
+                   Get the best advice on digital marketing and search engine optimization.
                 </Typography>
            </Grid>
            <Grid item classes={{root : classes.slideBarbtnContainer}}>
@@ -297,6 +294,7 @@ const BlogPost = ({ blog, blogData }) => {
            </Grid>
           </Grid>
           </Grid>
+
           )}
              <Footer /> 
         </Grid> 
