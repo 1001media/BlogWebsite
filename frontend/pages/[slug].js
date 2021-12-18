@@ -213,9 +213,9 @@ const BlogPost = ({ blog, blogData }) => {
             <Grid item container  alignItems="center" justifyContent="center" classes={{root: classes.secondContainer}}>
                 {matchesSM ? null : (
                                    <Grid item classes={{root: classes.avatarContainer}}>
-                                   <Link href="/">
+                                   <Link href="/blog-archive">
                                    <Avatar classes={{root: classes.avatar}}>
-                                       <Typography>{"<-"}</Typography>
+                                       <Typography>{"<"}</Typography>
                                    </Avatar>
                                    </Link>
                                 </Grid>
