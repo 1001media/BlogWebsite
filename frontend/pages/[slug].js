@@ -225,7 +225,7 @@ const BlogPost = ({ blog, blogData }) => {
                         {blog[0].heading}
                     </Typography>
                     <Typography align={matchesMD ? "center" : undefined} classes={{root: classes.subTitleText}}>
-                          Category: {blog[0].category} Date:{blog[0].date} 
+                          Content Category: {blog[0].category} Date:{blog[0].date} 
                     </Typography>
                 </Grid>
             </Grid>
