@@ -73,9 +73,6 @@ const Section = () => {
                         classes={{root: classes.avatar}}
                         >
                       
-
-
-
                         </Avatar>
                     </Grid>
                     <Grid item classes={{root: classes.gap2}}>
@@ -99,8 +96,7 @@ const Section = () => {
                         <Avatar
                         classes={{root: classes.avatar}}
                         >
-                            ONLINE LEAD GENERATION
-                        </Avatar>
+                                            </Avatar>
                     </Grid>
                     <Grid item classes={{root: classes.gap2}}>
                         <Typography align="center" variant="h2" classes={{root: classes.cardText}}>
@@ -124,8 +120,7 @@ Building and optimizing lead capturing and nurturing systems for converting lead
                         <Avatar
                         classes={{root: classes.avatar}}
                         >
-                        DIGITAL MARKETING STRATEGIES
-                        </Avatar>
+                             </Avatar>
                     </Grid>
                     <Grid item classes={{root: classes.gap2}}>
                         <Typography align="center" variant="h2" classes={{root: classes.cardText}}>
