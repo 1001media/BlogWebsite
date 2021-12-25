@@ -47,30 +47,29 @@ const ClientSection = () => {
             <Grid item container justify="center">
                 <Grid item classes={{root: classes.headingContainer}}>
                    <Typography variant="h2" classes={{root: classes.headingText}}>
-                  Certifications
+                       Clients
                    </Typography>
                 </Grid>
             </Grid>
             <Grid item container justify="space-around" classes={{root: classes.secondContainer}}>
                 <Grid item classes={{root: classes.logoContainer}}>
                     <Typography align="center" classes={{root: classes.logoText}}>
-               
-                        Google Ads 
+                        Logo
                     </Typography>
                 </Grid>
                 <Grid item classes={{root: classes.logoContainer}}>
                     <Typography align="center" classes={{root: classes.logoText}}>
-                Bing Ads
+                        Logo
                     </Typography>
                 </Grid>
                 <Grid item classes={{root: classes.logoContainer}}>
                     <Typography align="center" classes={{root: classes.logoText}}>
-              Hubspot Inbound 
+                        Logo
                     </Typography>
                 </Grid>
                 <Grid item classes={{root: classes.logoContainer}}>
                     <Typography align="center" classes={{root: classes.logoText}}>
-             Apple Final Cut Pro
+                        Logo
                     </Typography>
                 </Grid>
             </Grid>
