@@ -48,12 +48,13 @@ const Section = () => {
             <Grid item container justify="center" alignItems="center" direction="column">
                 <Grid item>
                     <Typography variant="h2" classes={{root: classes.sectionHeadingText}}>
-                        Section Heading
+                       What I Do Best
+
                     </Typography>
                 </Grid>
                 <Grid item classes={{root : classes.gap}}>
                     <Typography variant="h2" align="center" classes={{root: classes.subTitleText}}>
-                        Sub Title
+                   When it comes to Digital Marketing, I specialize in:
                     </Typography>
                 </Grid>
             </Grid>
@@ -71,14 +72,17 @@ const Section = () => {
                         <Avatar
                         classes={{root: classes.avatar}}
                         >
-                            H
+                       CONVERSION RATE OPTIMIZATION
+
+
+
+
+
                         </Avatar>
                     </Grid>
                     <Grid item classes={{root: classes.gap2}}>
                         <Typography align="center" variant="h2" classes={{root: classes.cardText}}>
-                            Lorem ipsum dolor sit amet, consectetur 
-                            adipiscing elit. Integer nec odio. Praesent 
-                            libero. 
+                        CRO includes designing and developing converting landing pages and websites for increasing ROI.
                         </Typography>
                     </Grid>
                     </Grid>
@@ -96,14 +100,14 @@ const Section = () => {
                         <Avatar
                         classes={{root: classes.avatar}}
                         >
-                            H
+                            ONLINE LEAD GENERATION
                         </Avatar>
                     </Grid>
                     <Grid item classes={{root: classes.gap2}}>
                         <Typography align="center" variant="h2" classes={{root: classes.cardText}}>
-                            Lorem ipsum dolor sit amet, consectetur 
-                            adipiscing elit. Integer nec odio. Praesent 
-                            libero. 
+                    
+Building and optimizing lead capturing and nurturing systems for converting leads to sales.
+
                         </Typography>
                     </Grid>
                     </Grid>
@@ -121,14 +125,14 @@ const Section = () => {
                         <Avatar
                         classes={{root: classes.avatar}}
                         >
-                            H
+                        DIGITAL MARKETING STRATEGIES
                         </Avatar>
                     </Grid>
                     <Grid item classes={{root: classes.gap2}}>
                         <Typography align="center" variant="h2" classes={{root: classes.cardText}}>
-                            Lorem ipsum dolor sit amet, consectetur 
-                            adipiscing elit. Integer nec odio. Praesent 
-                            libero. 
+                       
+
+Developing winning strategies to dominate paid and organic traffic generation channels.
                         </Typography>
                     </Grid>
                     </Grid>
