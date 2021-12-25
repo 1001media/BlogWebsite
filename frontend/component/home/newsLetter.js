@@ -146,7 +146,7 @@ const NewsLatter = ({ setSnackBarMessage, setSnackBarColor, setShowSnackBar }) =
                 </Grid>
                 <Grid item classes={{root: classes.inlineGap}}> 
                     <Typography variant="h1" align={matchesMD ? "center" : undefined}  classes={{root: classes.text}}>
-                      The Inner Circle is where I share the latest strategies, tactics and tools that is currently working in Digital Marketing for me. <br> These include case studies, reports and cheatsheets.
+                      The Inner Circle is where I share the latest strategies, tactics and tools that is currently working in Digital Marketing for me. These include case studies, reports and cheatsheets.
                     </Typography>
                 </Grid>
             </Grid>
