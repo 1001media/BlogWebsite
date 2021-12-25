@@ -8,7 +8,10 @@ const useStyles = makeStyles({
     mainContainer :{
         width: "100%",
         height : "557px",
-        background: "#f9f1ef"
+        background: "#f9f1ef",
+        [theme.breakpoints.down("sm")]: {
+            height : "auto"
+        }
         
     },
     secondContainer: {
@@ -40,6 +43,7 @@ const useStyles = makeStyles({
     },
     btn : {
         borderRadius : 10,
+        paddingTop: "1rem",
     },
     btnText: {
         textTransform: "none",
@@ -67,7 +71,8 @@ const Hero = () => {
     const classes = useStyles()
 
     const matchesMD = useMediaQuery(th => theme.breakpoints.down("md"))
-
+    const matchesSM = useMediaQuery(th => theme.breakpoints.down("sm"))
+    
     return (
         <Grid container classes={{root: classes.mainContainer}}>
             <Grid 
@@ -81,20 +86,20 @@ const Hero = () => {
             alignItems={ matchesMD ? "center" : undefined}
             >
                 <Grid item>
-                    <Typography variant="h2" classes={{root: classes.headlineText}}>
+                    <Typography align={matchesSM ? "center" : undefined} variant="h2" classes={{root: classes.headlineText}}>
                       Digital Marketing Specialist
                     </Typography>
                 </Grid>
 
                 <Grid item classes={{root: classes.gap}}>
-                    <Typography variant="h2" classes={{root: classes.subHeadlineText}}>
+                    <Typography align={matchesSM ? "center" : undefined} variant="h2" classes={{root: classes.subHeadlineText}}>
                     Artist. Growth Hacker
 
                     </Typography>
                 </Grid>
 
                 <Grid item classes={{root: classes.gap}}>
-                    <Typography variant="h2" classes={{root: classes.text}}>
+                    <Typography align={matchesSM ? "center" : undefined} variant="h2" classes={{root: classes.text}}>
                As a Digital Marketing Specialist with more than 12 years’ experience in visualization, design and digital marketing, I have delivered traffic, 
                    leads and sales using the latest advertising and marketing strategies in the industry.
                     </Typography>
