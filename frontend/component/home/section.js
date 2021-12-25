@@ -72,16 +72,19 @@ const Section = () => {
                         <Avatar
                         classes={{root: classes.avatar}}
                         >
-                       CONVERSION RATE OPTIMIZATION
+                      
 
 
-
+           <Grid item container lg={4} classes={{root: classes.imageContainer}}>
+                <img src="/dms-01.png" className={classes.img}/>
+            </Grid>
 
 
                         </Avatar>
                     </Grid>
                     <Grid item classes={{root: classes.gap2}}>
                         <Typography align="center" variant="h2" classes={{root: classes.cardText}}>
+                             CONVERSION RATE OPTIMIZATION <br>
                         CRO includes designing and developing converting landing pages and websites for increasing ROI.
                         </Typography>
                     </Grid>
