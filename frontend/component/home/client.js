@@ -54,23 +54,23 @@ const ClientSection = () => {
             <Grid item container justify="space-around" classes={{root: classes.secondContainer}}>
                 <Grid item classes={{root: classes.logoContainer}}>
                     <Typography align="center" classes={{root: classes.logoText}}>
-                        <img src="a1.jpg className={classes.img}/>
-
+               
+                        Google Ads 
                     </Typography>
                 </Grid>
                 <Grid item classes={{root: classes.logoContainer}}>
                     <Typography align="center" classes={{root: classes.logoText}}>
-                          <img src="a2.jpg className={classes.img}/>
+                Bing Ads
                     </Typography>
                 </Grid>
                 <Grid item classes={{root: classes.logoContainer}}>
                     <Typography align="center" classes={{root: classes.logoText}}>
-                          <img src="a3.jpg className={classes.img}/>
+              Hubspot Inbound 
                     </Typography>
                 </Grid>
                 <Grid item classes={{root: classes.logoContainer}}>
                     <Typography align="center" classes={{root: classes.logoText}}>
-                   <img src="a4.jpg className={classes.img}/>
+             Apple Final Cut Pro
                     </Typography>
                 </Grid>
             </Grid>
