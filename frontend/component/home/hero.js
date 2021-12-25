@@ -88,8 +88,8 @@ const Hero = () => {
 
                 <Grid item classes={{root: classes.gap}}>
                     <Typography variant="h2" classes={{root: classes.subHeadlineText}}>
-                    Digital Marketing Specialist<br>
-Artist. Growth Hacker
+                    Digital Marketing Specialist
+
                     </Typography>
                 </Grid>
 
