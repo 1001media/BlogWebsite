@@ -95,7 +95,7 @@ const Hero = () => {
 
                 <Grid item classes={{root: classes.gap}}>
                     <Typography variant="h2" classes={{root: classes.text}}>
-               As a Digital Marketing Specialist with more than 12+ years’ experience in visualization, design and digital marketing, I have delivered traffic, 
+               As a Digital Marketing Specialist with more than 12 years’ experience in visualization, design and digital marketing, I have delivered traffic, 
                    leads and sales using the latest advertising and marketing strategies in the industry.
                     </Typography>
                 </Grid>
