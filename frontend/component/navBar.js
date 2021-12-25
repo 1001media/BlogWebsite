@@ -173,11 +173,13 @@ const NavBar = () => {
                     </Typography>
                 </Grid>
                 </Link>
+   <Link href="/">
                 <Grid item>
                     <Typography  classes={{root: classes.siteNameText}}>
                        Hari Gopinath
                     </Typography>
                 </Grid>
+     </Link>
             </Grid>
 
             {!matchesSM ? (
