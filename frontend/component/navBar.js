@@ -173,15 +173,14 @@ const NavBar = () => {
                     </Typography>
                 </Grid>
            
- 
+  </Link>
                 <Grid item>
                     <Typography  classes={{root: classes.siteNameText}}>
                        Hari Gopinath
                     </Typography>
                 </Grid>
-  
-            </Grid>
-            </Link>
+              </Grid>
+           
             {!matchesSM ? (
             <Grid item container sm={6} justifyContent="space-around" classes={{root: classes.linkContainer}}>
             {datas.map((data, i) => (
