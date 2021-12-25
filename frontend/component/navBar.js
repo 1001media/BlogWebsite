@@ -27,14 +27,20 @@ const useStyles = makeStyles({
     logoText: {
         fontSize: "2rem",
         fontWeight: "bold",
-        padding: ".7rem 1.5rem"
+        padding: ".7rem 1.5rem",
+        [theme.breakpoints.down("sm")]: {
+            fontSize: "1.5rem",
+        }
     },
     siteNameText : {
         marginLeft: "1.4rem",
         //marginTop: ".6rem",
         color: theme.palette.secondary.main,
         fontWeight : "bold",
-        fontSize: "2rem"
+        fontSize: "2rem",
+        [theme.breakpoints.down("sm")]: {
+            fontSize: "1.2rem",
+        }
     },
     secondContainer: {
         marginLeft: "2rem",
