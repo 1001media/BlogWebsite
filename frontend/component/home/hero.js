@@ -82,21 +82,21 @@ const Hero = () => {
             >
                 <Grid item>
                     <Typography variant="h2" classes={{root: classes.headlineText}}>
-                        Join Us
+                      Hari Gopinath
                     </Typography>
                 </Grid>
 
                 <Grid item classes={{root: classes.gap}}>
                     <Typography variant="h2" classes={{root: classes.subHeadlineText}}>
-                        Get latest hacks & insights right in  your inbox.
+                    Digital Marketing Specialist<br>
+Artist. Growth Hacker
                     </Typography>
                 </Grid>
 
                 <Grid item classes={{root: classes.gap}}>
                     <Typography variant="h2" classes={{root: classes.text}}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent 
-                        libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum 
-                        imperdiet. Duis sagittis ipsum. 
+               As a Digital Marketing Specialist with more than 12+ years’ experience in visualization, design and digital marketing, I have delivered traffic, 
+                   leads and sales using the latest advertising and marketing strategies in the industry.
                     </Typography>
                 </Grid>
 
