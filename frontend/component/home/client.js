@@ -69,7 +69,9 @@ const ClientSection = () => {
                 </Grid>
                 <Grid item classes={{root: classes.logoContainer}}>
                     <Typography align="center" classes={{root: classes.logoText}}>
-                        Logo 4
+                          <Grid item container lg={4} classes={{root: classes.imageContainer}}>
+                <img src="/a4.jpg" className={classes.img}/>
+            </Grid>
                     </Typography>
                 </Grid>
             </Grid>
