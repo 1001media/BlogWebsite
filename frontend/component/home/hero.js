@@ -82,13 +82,13 @@ const Hero = () => {
             >
                 <Grid item>
                     <Typography variant="h2" classes={{root: classes.headlineText}}>
-                      Hari Gopinath
+                      Digital Marketing Specialist
                     </Typography>
                 </Grid>
 
                 <Grid item classes={{root: classes.gap}}>
                     <Typography variant="h2" classes={{root: classes.subHeadlineText}}>
-                    Digital Marketing Specialist
+                    Artist. Growth Hacker
 
                     </Typography>
                 </Grid>
@@ -103,7 +103,7 @@ const Hero = () => {
                 <Grid item classes={{root: classes.gap}}>
                     <Button variant="contained" color="primary" classes={{root: classes.btn}}>
                         <Typography variant="h1" classes={{root: classes.btnText}}>
-                            Learn More 
+                          Visit Blog
                         </Typography>
                     </Button>
                 </Grid>
