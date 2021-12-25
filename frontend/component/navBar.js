@@ -22,7 +22,7 @@ const useStyles = makeStyles({
     logoContainer : {
         cursor: "pointer",
         backgroundColor: theme.palette.primary.main,
-        borderRadius: 10,
+        borderRadius: 11,
     },
     logoText: {
         fontSize: "2rem",
