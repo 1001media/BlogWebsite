@@ -141,14 +141,12 @@ const NewsLatter = ({ setSnackBarMessage, setSnackBarColor, setShowSnackBar }) =
             >
                 <Grid item>
                     <Typography align={matchesMD ? "center" : undefined} variant='h1' classes={{root : classes.heading}}> 
-                        Newsletter Subscription
+                  Join my Inner Circle
                     </Typography>
                 </Grid>
                 <Grid item classes={{root: classes.inlineGap}}> 
                     <Typography variant="h1" align={matchesMD ? "center" : undefined}  classes={{root: classes.text}}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec 
-                        odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla 
-                        quis sem at nibh elementum imperdiet.
+                      The Inner Circle is where I share the latest strategies, tactics and tools that is currently working in Digital Marketing for me. <br> These include case studies, reports and cheatsheets.
                     </Typography>
                 </Grid>
             </Grid>
