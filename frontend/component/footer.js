@@ -25,7 +25,7 @@ const Footer = () => {
             <Grid item container lg={5} justifyContent="center">
                 <Grid item>
                     <Typography classes={{root: classes.nameText}}>
-                       © 2021 Website Name
+                       © 2021 Hari Gopinath
                     </Typography>
                 </Grid>
             </Grid>
