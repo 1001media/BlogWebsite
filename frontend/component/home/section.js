@@ -72,7 +72,7 @@ const Section = () => {
                         <Avatar
                         classes={{root: classes.avatar}}
                         >
-                      
+                      CRO
                         </Avatar>
                     </Grid>
                     <Grid item classes={{root: classes.gap2}}>
@@ -95,7 +95,7 @@ const Section = () => {
                     <Grid item>
                         <Avatar
                         classes={{root: classes.avatar}}
-                        >
+                        > OLG
                                             </Avatar>
                     </Grid>
                     <Grid item classes={{root: classes.gap2}}>
@@ -119,7 +119,7 @@ Building and optimizing lead capturing and nurturing systems for converting lead
                     <Grid item>
                         <Avatar
                         classes={{root: classes.avatar}}
-                        >
+                        > DMS
                              </Avatar>
                     </Grid>
                     <Grid item classes={{root: classes.gap2}}>
