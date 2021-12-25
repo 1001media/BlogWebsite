@@ -163,13 +163,13 @@ const NavBar = () => {
                 <Link href="/">
                 <Grid item classes={{root: classes.logoContainer}}>
                     <Typography  variant="h1" classes={{root: classes.logoText}}>
-                           H
+                           HG
                     </Typography>
                 </Grid>
                 </Link>
                 <Grid item>
                     <Typography  classes={{root: classes.siteNameText}}>
-                        Site Title
+                       Hari Gopinath
                     </Typography>
                 </Grid>
             </Grid>
