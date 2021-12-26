@@ -176,7 +176,7 @@ const NavBar = () => {
   </Link>
                 <Grid item>
                     <Typography  classes={{root: classes.siteNameText}}>
-                       Hari Gopinath
+                       <Link href="/">  Hari Gopinath </Link>
                     </Typography>
                 </Grid>
               </Grid>
