@@ -133,13 +133,14 @@ const BlogArchive = ({  blogData, categoryData }) => {
             <Grid item container direction="column" alignItems="center">
                 <Grid item>
                     <Typography classes={{root: classes.titleText}}>
-                        Blog Section Title
+                        Digital Marketing Blog
+
                     </Typography>
                 </Grid>
 
                 <Grid item>
                     <Typography classes={{root: classes.descriptionText}}>
-                        Blog Page Description
+                   My tips & tools for Digital Marketing
                     </Typography>
                 </Grid>
             </Grid>
