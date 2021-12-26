@@ -42,18 +42,7 @@ const useStyles = makeStyles({
             fontSize: "1.2rem",
         }
     },
-      siteNameTextLink : {
-        marginLeft: "1.4rem",
-        //marginTop: ".6rem",
-        color: theme.palette.secondary.main,
-        fontWeight : "bold",
-        text-decoration: "none",
-        fontSize: "2rem",
-        [theme.breakpoints.down("sm")]: {
-            fontSize: "1.2rem",
-            
-        }
-    },
+   
     secondContainer: {
         marginLeft: "2rem",
         [theme.breakpoints.down("sm")] : {
@@ -188,7 +177,7 @@ const NavBar = () => {
   </Link>
                 <Grid item>
                     <Typography  classes={{root: classes.siteNameText}}>
-                       <Link href="/" classes={{root: classes.siteNameTextLink}} >  Hari Gopinath </Link>
+                       <Link href="/">  Hari Gopinath </Link>
                     </Typography>
                 </Grid>
               </Grid>
