@@ -274,23 +274,26 @@ const BlogPost = ({ blog, blogData }) => {
               <Grid item container direction="column" alignItems="center" justifyContent="space-around" > 
            <Grid item>
                 <Typography classes={{root: classes.slideBarHeaderText}}>
-                  Digital Marketing
+                 Recommended Read: Atomic Habits
                 </Typography>
             </Grid>
             <Grid item classes={{root: classes.slideBarImageContainer}}>
-                <img  className={classes.sildeBarImage} src="/hero-image.png" alt="machine" />
+                <img  className={classes.sildeBarImage} src="/atomichabits.png" alt="atomic habits" />
             </Grid>
             <Grid item>
                 <Typography align="justify" classes={{root: classes.slideBarDescriptionText}}>
-                   Get the best advice on digital marketing and search engine optimization.
+                   An Easy & Proven Way to Build Good Habits & Break Bad Ones
                 </Typography>
            </Grid>
            <Grid item classes={{root : classes.slideBarbtnContainer}}>
+               
+               <Link href="https://www.amazon.com/Atomic-Habits-Proven-Build-Break/dp/0735211299">
                <Button classes={{root: classes.sildeBarbtn}} variant="contained" color="primary">
                     <Typography classes={{root: classes.slideBarBtntext}}>
-                        Learn More
+                        Buy Now
                     </Typography>
             </Button>
+</Link>
            </Grid>
           </Grid>
           </Grid>
