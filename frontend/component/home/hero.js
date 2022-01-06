@@ -109,11 +109,9 @@ const Hero = () => {
                     
                        
                     <Button variant="contained" color="primary" classes={{root: classes.btn}}>
-                         <Link href="/blog">
-                        <Typography variant="h1" classes={{root: classes.btnText}}>
+                               <Typography variant="h1" classes={{root: classes.btnText}}>
                           Visit Blog
-                         </Link>
-                        </Typography>
+                                     </Typography>
                     </Button>
         
                 </Grid>
