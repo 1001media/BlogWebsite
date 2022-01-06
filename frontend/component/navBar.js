@@ -211,12 +211,7 @@ const NavBar = () => {
                  ) : (
                     <Grid item classes={{root:  classes.nav}}>
                         <li className={classes.navListItem}>Review
-                            <ul className={classes.navListItemdrop}>
-                                <li className={classes.item}>Certificate</li>
-                                <li className={classes.item}>Downloads</li>
-                                <li className={classes.item}>Reviews</li>
-                                <li className={classes.item}>Tools</li>
-                            </ul>
+                     
                         </li>
                     </Grid>
                  )
