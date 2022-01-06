@@ -105,7 +105,7 @@ const useStyles = makeStyles({
         }
     },
     text :{
-        wordSpacing: "5px",
+        wordSpacing: "1px",
         lineHeight: "2rem",
         paddingLeft: "5rem",
         paddingRight: "5rem",
