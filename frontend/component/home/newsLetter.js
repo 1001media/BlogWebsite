@@ -155,12 +155,12 @@ const NewsLatter = ({ setSnackBarMessage, setSnackBarColor, setShowSnackBar }) =
 
             <Grid item container direction="column" lg={5} md={12} justifyContent="center" alignItems="center">
                 <Grid item classes={{root: classes.inputContainer}}>
-                    <input className={classes.input}  placeholder="Name" text type="name" value={name} onChange={handleChange}/>
+                    <input className={classes.input}  placeholder="Name"  type="text" value={name} onChange={handleChange}/>
                 </Grid>
                 <Grid  item classes={{root: clsx ( 
                     [classes.inputContainer, classes.inlineGap]
                     )}}>
-                    <input className={classes.input}  placeholder="Email" text type="email" value={email} onChange={e => setEmail(e.target.value)}/>
+                    <input className={classes.input}  placeholder="Email"  type="email" value={email} onChange={e => setEmail(e.target.value)}/>
                 </Grid>
                 <Grid item classes={{root: classes.btnContainer}}>
                     <Button onClick={handlePostData} variant="contained" classes={{root: classes.btn}}>

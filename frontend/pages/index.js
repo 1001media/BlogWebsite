@@ -9,7 +9,10 @@ import Footer from "../component/footer"
 
 import { Snackbar, makeStyles } from "@material-ui/core"
 
-import { useState } from "react"
+import ReactGA from 'react-ga';
+
+
+import { useState, useEffect} from "react"
 import theme from "../styles/theme"
 
 import Head from "next/head"
@@ -27,9 +30,15 @@ export default function Home({ blogData }) {
 
   const classes = useStyles()
 
+  ReactGA.initialize('UA-91042774-1');
+
   const [ showSnackBar, setShowSnackBar ] = useState(false)
   const [ snackbarMessage, setSnackBarMessage ] = useState("")
   const [ snackBarColor, setSnackBarColor] = useState("")
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, [])
 
   return (
     <div >

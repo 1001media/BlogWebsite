@@ -18,7 +18,7 @@ const useStyles = makeStyles({
         cursor : "pointer",
         [theme.breakpoints.down("xs")]: {
             
-            height: "20rem"
+            height: "auto"
         }
     },
     img:  {
