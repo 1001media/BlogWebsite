@@ -34,6 +34,7 @@ const useStyles = makeStyles({
     },
     siteNameText : {
         marginLeft: "1.4rem",
+        cursor : "pointer",
         //marginTop: ".6rem",
         color: theme.palette.secondary.main,
         fontWeight : "bold",
@@ -176,9 +177,11 @@ const NavBar = () => {
            
   </Link>
                 <Grid item>
+                <Link href="/">
                     <Typography  classes={{root: classes.siteNameText}}>
-                       <Link href="/">  Hari Gopinath </Link>
+                         Hari Gopinath 
                     </Typography>
+                    </Link>
                 </Grid>
               </Grid>
            
