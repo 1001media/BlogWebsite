@@ -22,20 +22,27 @@ const useStyles = makeStyles({
     logoContainer : {
         cursor: "pointer",
         backgroundColor: theme.palette.primary.main,
-        borderRadius: 10,
+        borderRadius: 11,
     },
     logoText: {
         fontSize: "2rem",
         fontWeight: "bold",
-        padding: ".7rem 1.5rem"
+        padding: ".7rem 1.5rem",
+        [theme.breakpoints.down("sm")]: {
+            fontSize: "1.5rem",
+        }
     },
     siteNameText : {
         marginLeft: "1.4rem",
         //marginTop: ".6rem",
         color: theme.palette.secondary.main,
         fontWeight : "bold",
-        fontSize: "2rem"
+        fontSize: "2rem",       
+        [theme.breakpoints.down("sm")]: {
+            fontSize: "1.2rem",
+        }
     },
+   
     secondContainer: {
         marginLeft: "2rem",
         [theme.breakpoints.down("sm")] : {
@@ -138,7 +145,7 @@ const NavBar = () => {
         {name: "Home", fill: true, href:"/", dropDown: false},
         {name: "About", fill: false, href:"#", dropDown: false},
         {name: "Reviews", fill: false, href:"#", dropDown: true},
-        {name: "Blog", fill: false, href: "/blog-archive"},
+        {name: "Blog", fill: false, href: "/blog"},
         {name: "Contact", fill: false, href: '#', dropDown: false}
     ]
 
@@ -163,17 +170,18 @@ const NavBar = () => {
                 <Link href="/">
                 <Grid item classes={{root: classes.logoContainer}}>
                     <Typography  variant="h1" classes={{root: classes.logoText}}>
-                           H
+                           HG
                     </Typography>
                 </Grid>
-                </Link>
+           
+  </Link>
                 <Grid item>
                     <Typography  classes={{root: classes.siteNameText}}>
-                        Site Title
+                       <Link href="/">  Hari Gopinath </Link>
                     </Typography>
                 </Grid>
-            </Grid>
-
+              </Grid>
+           
             {!matchesSM ? (
             <Grid item container sm={6} justifyContent="space-around" classes={{root: classes.linkContainer}}>
             {datas.map((data, i) => (
@@ -203,12 +211,7 @@ const NavBar = () => {
                  ) : (
                     <Grid item classes={{root:  classes.nav}}>
                         <li className={classes.navListItem}>Review
-                            <ul className={classes.navListItemdrop}>
-                                <li className={classes.item}>Certificate</li>
-                                <li className={classes.item}>Downloads</li>
-                                <li className={classes.item}>Reviews</li>
-                                <li className={classes.item}>Tools</li>
-                            </ul>
+                     
                         </li>
                     </Grid>
                  )

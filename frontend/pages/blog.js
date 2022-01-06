@@ -49,7 +49,8 @@ const useStyles = makeStyles({
         "&::placeholder" : {
             color: "black",
             fontWeight :400,
-            fontSize : "1.2rem"
+            fontSize : "1.2rem",
+            borderRadius : "10",
         },
         "&::label" : {
             color: "#fff",
@@ -63,7 +64,7 @@ const useStyles = makeStyles({
         marginLeft: "1rem",
         width: "8rem",
         height: "3rem",
-        borderRadius : "0",
+        borderRadius : "1",
         "&:hover" : {
             backgroundColor: theme.palette.secondary.main
         },
@@ -132,13 +133,14 @@ const BlogArchive = ({  blogData, categoryData }) => {
             <Grid item container direction="column" alignItems="center">
                 <Grid item>
                     <Typography classes={{root: classes.titleText}}>
-                        Blog Section Title
+                        Digital Marketing Blog
+
                     </Typography>
                 </Grid>
 
                 <Grid item>
                     <Typography classes={{root: classes.descriptionText}}>
-                        Blog Page Description
+                   My tips & tools for Digital Marketing
                     </Typography>
                 </Grid>
             </Grid>

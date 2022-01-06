@@ -105,7 +105,7 @@ const useStyles = makeStyles({
         }
     },
     text :{
-        wordSpacing: "5px",
+        wordSpacing: "1px",
         lineHeight: "2rem",
         paddingLeft: "5rem",
         paddingRight: "5rem",
@@ -134,7 +134,8 @@ const useStyles = makeStyles({
     },
     slideBarHeaderText: {
         fontWeight: "bold",
-        fontSize: "1.5rem"
+        fontSize: "1.5rem",
+        padding: "5px"
     } ,
     slideBarImageContainer : {
         width: "14rem",
@@ -213,9 +214,9 @@ const BlogPost = ({ blog, blogData }) => {
             <Grid item container  alignItems="center" justifyContent="center" classes={{root: classes.secondContainer}}>
                 {matchesSM ? null : (
                                    <Grid item classes={{root: classes.avatarContainer}}>
-                                   <Link href="/">
+                                   <Link href="/blog">
                                    <Avatar classes={{root: classes.avatar}}>
-                                       <Typography>{"<-"}</Typography>
+                                       <Typography>{"<"}</Typography>
                                    </Avatar>
                                    </Link>
                                 </Grid>
@@ -225,7 +226,7 @@ const BlogPost = ({ blog, blogData }) => {
                         {blog[0].heading}
                     </Typography>
                     <Typography align={matchesMD ? "center" : undefined} classes={{root: classes.subTitleText}}>
-                          Category: {blog[0].category} Date:{blog[0].date} 
+                          Content Category: {blog[0].category} Date:{blog[0].date} 
                     </Typography>
                 </Grid>
             </Grid>
@@ -274,23 +275,26 @@ const BlogPost = ({ blog, blogData }) => {
               <Grid item container direction="column" alignItems="center" justifyContent="space-around" > 
            <Grid item>
                 <Typography classes={{root: classes.slideBarHeaderText}}>
-                  Digital Marketing
+                 Recommended Read: Atomic Habits
                 </Typography>
             </Grid>
             <Grid item classes={{root: classes.slideBarImageContainer}}>
-                <img  className={classes.sildeBarImage} src="/hero-image.png" alt="machine" />
+                <img  className={classes.sildeBarImage} src="/atomichabits.png" alt="atomic habits" />
             </Grid>
             <Grid item>
                 <Typography align="justify" classes={{root: classes.slideBarDescriptionText}}>
-                   Get the best advice on digital marketing and search engine optimization.
+                   An Easy & Proven Way to Build Good Habits & Break Bad Ones
                 </Typography>
            </Grid>
            <Grid item classes={{root : classes.slideBarbtnContainer}}>
+               
+               <Link href="https://www.amazon.com/Atomic-Habits-Proven-Build-Break/dp/0735211299">
                <Button classes={{root: classes.sildeBarbtn}} variant="contained" color="primary">
                     <Typography classes={{root: classes.slideBarBtntext}}>
-                        Learn More
+                        Buy Now
                     </Typography>
             </Button>
+</Link>
            </Grid>
           </Grid>
           </Grid>
