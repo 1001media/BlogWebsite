@@ -6,6 +6,20 @@
     padding-right: 2rem;
 }
 
+
 .article p img {
     width: 100%
 }
+
+
+@media screen and (max-width: 450px) {
+    .article {
+        width:22rem
+    }
+    .article p img {
+        width: 18rem
+    }
+    .article ol li img{
+        width: 12rem;
+    }
+  }

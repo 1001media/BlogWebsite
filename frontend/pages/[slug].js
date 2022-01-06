@@ -35,7 +35,7 @@ const useStyles = makeStyles({
         }
     },
     titleText: { 
-        fontSize : "2.5rem",
+        fontSize : "2rem",
         fontWeight : "bold"
     },
     subTitleText : {
@@ -50,7 +50,7 @@ const useStyles = makeStyles({
     },
     avatarContainer : {
         position: "relative",
-        right : 300,
+        right : 400,
         [theme.breakpoints.down("md")]: {
             right: 250
         }
