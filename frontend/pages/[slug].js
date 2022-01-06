@@ -134,7 +134,8 @@ const useStyles = makeStyles({
     },
     slideBarHeaderText: {
         fontWeight: "bold",
-        fontSize: "1.5rem"
+        fontSize: "1.5rem",
+        padding: "5px"
     } ,
     slideBarImageContainer : {
         width: "14rem",
