@@ -34,10 +34,11 @@ const useStyles = makeStyles({
     },
     siteNameText : {
         marginLeft: "1.4rem",
+         text-decoration:"none",
         //marginTop: ".6rem",
         color: theme.palette.secondary.main,
         fontWeight : "bold",
-        fontSize: "2rem",
+        fontSize: "2rem",       
         [theme.breakpoints.down("sm")]: {
             fontSize: "1.2rem",
         }
