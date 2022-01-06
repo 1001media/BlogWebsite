@@ -34,7 +34,6 @@ const useStyles = makeStyles({
     },
     siteNameText : {
         marginLeft: "1.4rem",
-         text-decoration:"none",
         //marginTop: ".6rem",
         color: theme.palette.secondary.main,
         fontWeight : "bold",
