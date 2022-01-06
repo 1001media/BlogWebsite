@@ -107,13 +107,15 @@ const Hero = () => {
 
                 <Grid item classes={{root: classes.gap}}>
                     
-                        <Link href="/blog">
+                       
                     <Button variant="contained" color="primary" classes={{root: classes.btn}}>
+                         <Link href="/blog">
                         <Typography variant="h1" classes={{root: classes.btnText}}>
                           Visit Blog
+                         </Link>
                         </Typography>
                     </Button>
-                    </Link>
+        
                 </Grid>
             </Grid>
             { matchesMD ? undefined : (
